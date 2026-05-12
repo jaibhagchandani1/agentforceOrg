@@ -8,6 +8,7 @@ public with sharing class ContactTriggerHandler {
     public static void beforeUpdate(List<Contact> newList, Map<Id, Contact> oldMap) {
         ContactTriggerHelper.markDuplicateContacts(newList);
         ContactTriggerHelper.preventDuplicateEmails(newList, oldMap);
+        //okay
     }
     
     public static void afterInsert(List<Contact> newList) {
