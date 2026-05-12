@@ -1,0 +1,50 @@
+.hotel-card {
+    border-radius: 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+
+.hotel-name {
+    font-weight: 600;
+    color: #2b2b2b;
+}
+
+.room-box {
+    border-radius: 0.5rem;
+    background: #f9f9f9;
+}
+
+.price-tag {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #0070d2;
+}
+
+.discount-chip {
+    background-color: #f83c1e;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.hotel-badge {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.hotel-badge[data-star="five"] {
+    background-color: #ffd700; /* Gold */
+    color: #2b2b2b;
+}
+
+.hotel-badge[data-star="four"] {
+    background-color: #c0c0c0; /* Silver */
+    color: #2b2b2b;
+}

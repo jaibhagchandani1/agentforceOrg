@@ -1,0 +1,10 @@
+<template>
+    <b>Order Here : </b>
+    <div>
+        <template for:each={value} for:item="Order">
+            <p key={Order.orderId}>Order Id - {Order.orderId}</p>
+            <p key={Order.orderId}>Order Status - {Order.orderStatus}</p>
+            <p key={Order.orderId}>Order Date - {Order.orderDate}</p>
+        </template>
+    </div>
+</template>

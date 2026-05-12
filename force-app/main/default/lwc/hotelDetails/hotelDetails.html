@@ -1,0 +1,60 @@
+<template>
+  <lightning-card title="Available Hotels" icon-name="standard:travel_mode">
+      <template if:true={value}>
+          <div class="slds-p-around_medium">
+              <template for:each={value} for:item="hotel">
+                  <div key={hotel.name} class="hotel-card slds-box slds-box_x-small slds-m-bottom_medium">
+                      <div class="slds-grid slds-grid_align-spread slds-m-bottom_small">
+                          <div>
+                              <div class="slds-grid slds-align-start slds-m-bottom_x-small">
+                                  <lightning-icon icon-name="standard:travel_mode" size="small" class="slds-m-right_small"></lightning-icon>
+                                  <h3 class="slds-text-heading_medium slds-truncate">{hotel.name}</h3>
+                              </div>
+                              <div class="slds-grid slds-align-start slds-text-body_regular slds-m-bottom_x-small">
+                                  <lightning-icon icon-name="utility:location" size="xx-small" class="slds-m-right_x-small"></lightning-icon>
+                                  <p>{hotel.address}</p>
+                              </div>
+                              <div class="slds-grid slds-align-start">
+                                  <lightning-icon icon-name="utility:favorite" size="xx-small" class="slds-m-right_x-small"></lightning-icon>
+                                  <span>{hotel.hotelCategory.star} Star</span>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="slds-p-left_medium">
+                          <h4 class="slds-text-title_bold slds-m-bottom_small slds-m-top_small">
+                              <lightning-icon icon-name="utility:home" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                              Rooms
+                          </h4>
+
+                          <template for:each={hotel.rooms} for:item="room">
+                              <div key={room.type} class="slds-box slds-box_xx-small slds-m-bottom_small slds-theme_shade">
+                                  <div class="slds-grid slds-wrap">
+                                      <div class="slds-col slds-size_1-of-2">
+                                          <p><strong>Type:</strong> {room.type}</p>
+                                          <p>
+                                              <lightning-icon icon-name="utility:event" size="xx-small" class="slds-m-right_xx-small"></lightning-icon>
+                                              <strong>Available:</strong> {room.available}
+                                          </p>
+                                      </div>
+                                      <div class="slds-col slds-size_1-of-2">
+                                          <p>
+                                              <lightning-icon icon-name="utility:money" size="xx-small" class="slds-m-right_xx-small"></lightning-icon>
+                                              <strong>Price:</strong> ₹{room.price}
+                                          </p>
+                                          <p><strong>Discount:</strong> {room.discountPercentage}%</p>
+                                          <p>
+                                              <lightning-icon icon-name="utility:animal_and_nature" size="xx-small" class="slds-m-right_xx-small"></lightning-icon>
+                                              <strong>Pets Allowed:</strong> {room.petAllowed}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </template>
+                      </div>
+                  </div>
+              </template>
+          </div>
+      </template>
+  </lightning-card>
+</template>

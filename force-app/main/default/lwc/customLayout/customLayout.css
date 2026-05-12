@@ -1,0 +1,53 @@
+.layout {
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100vh;
+
+}
+
+.header {
+
+    background: #16325c;
+
+    color: white;
+
+    padding: 1rem;
+
+}
+
+.body {
+
+    display: flex;
+
+    flex: 1;
+
+}
+
+.sidebar {
+
+    width: 220px;
+
+    background: #f4f6f9;
+
+    padding: 1rem;
+
+}
+
+.content {
+
+    flex: 1;
+
+    padding: 1rem;
+
+}
+
+.footer {
+
+    background: #ecebea;
+
+    padding: 0.5rem;
+
+}

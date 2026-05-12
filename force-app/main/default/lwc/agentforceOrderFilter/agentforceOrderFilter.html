@@ -1,0 +1,15 @@
+<template>
+    <div>
+        <p>Email : {email}</p>
+        <p>Order Name : {orderName}</p>
+    </div>
+
+    <lightning-input type="Email" label="Email" value={email} onchange={handleInputChange}>
+
+    </lightning-input>
+
+     <lightning-input type="text" label="orderName" value={orderName} onchange={handleInputChange}>
+        
+    </lightning-input>
+    
+</template>

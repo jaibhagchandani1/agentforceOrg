@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <div class="slds-p-horizontal_medium">
+            <lightning-combobox 
+                name="rating"
+                label="Select Rating"
+                value={rating}
+                placeholder="Select Rating"
+                options={options}
+                onchange={handleChange}
+                read-only={readOnly}>
+
+            </lightning-combobox>
+        </div>
+    </lightning-card>
+</template>

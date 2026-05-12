@@ -1,0 +1,58 @@
+.book-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap:1.5rem;
+    padding:1rem;
+}
+
+.book-card{
+    border-radius: 0.75rem;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+    transition : transform 0.2s  ease,box-shadow 0.2s ease
+}
+
+.book-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.book-title{
+    font-size:1.2rem;
+    font-weight: bold;
+}
+
+.book-author{
+    font-style: italic;
+    color:#555;
+}
+
+.book-year{
+    font-size:0.9rem;
+    color:#888;
+}
+
+.star-icon::part(icon){
+    --lwc-colorTextIconDefault: yellow;
+}
+
+.book-meta{
+    display:flex;
+    gap:0.5rem;
+    color:#555;
+    font-size:0.9rem;
+}
+
+.bestseller-badge{
+    background-color: #28a745;
+    color:white;
+    padding:0.3rem 0.6rem;
+    font-size:0.75rem;
+    border-radius:1rem;
+    font-weight: 600;
+}
+
+.buy-now-button{
+    width:100%;
+    margin-top:1rem;
+}

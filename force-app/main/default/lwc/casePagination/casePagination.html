@@ -1,0 +1,25 @@
+<template>
+
+    <lightning-card title="Cases">
+
+        <lightning-datatable
+            key-field="Id"
+            data={cases}
+            columns={columns}
+        >
+        </lightning-datatable>
+
+        <div class="pagination">
+
+            <lightning-button
+                label="Next"
+                onclick={handleNext}
+                disabled={isLastPage}
+            >
+            </lightning-button>
+
+        </div>
+
+    </lightning-card>
+
+</template>
